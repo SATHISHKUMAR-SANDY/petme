@@ -1,0 +1,72 @@
+.find-pet-head{
+    text-align: center;
+    margin-top: 100px;
+}
+.our-Adop-head {
+    position: relative;
+  }
+  .our-Adop-head h1 {
+    font-weight: 600;
+  }
+  .our-Adop-head img {
+    position: absolute;
+    top: -32px;
+    right: 280px;
+  }
+  .our-Adop-head-content p {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 575px) {
+    .our-Adop-head h1 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+  
+    .our-Adop-head img {
+      position: absolute;
+      width: 40px;
+      top: -18px;
+      right: -1px;
+    }
+  
+    .our-Adop-head-content p {
+      font-size: 10px;
+      font-weight: 700;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 991px) {
+    .our-Adop-head h1 {
+      font-size: 30px;
+      font-weight: 600;
+    }
+  
+    .our-Adop-head img {
+      position: absolute;
+      top: -45px;
+      right: 130px;
+    }
+  
+    .our-Adop-head-content p {
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+
+
+
+
+  .pet-img {
+    width: 80%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .pet-name {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }

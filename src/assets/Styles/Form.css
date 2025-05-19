@@ -1,0 +1,41 @@
+.custominput input {
+  border: solid 2px black;
+  width: 500px;
+  height: 45px;
+}
+.custominput label {
+  font-size: 25px;
+  font-weight: 600;
+}
+.custominput2 .card{
+border: none;
+}
+.custominput2 h5{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.custominput2 p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.custom-button2{
+padding: 10px 30px;
+background-color:#471C51;
+border-radius: 10px;
+color: white;
+font-size: 20px;
+font-weight: 600;
+}
+.custom-button3{
+    padding: 10px 30px;
+    background-color:#471C51;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    left: 100px;
+    top: 60px;
+    
+    }

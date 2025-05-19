@@ -1,0 +1,97 @@
+{
+  "Dog": [
+    {
+      "name": "Dog",
+      "images": [
+        "/src/assets/images/dogs 1.png",
+        "/src/assets/images/dogs 2.png",
+        "/src/assets/images/dogs 3.png",
+        "/src/assets/images/dogs 4.png",
+        "/src/assets/images/dogs 5.png",
+        "/src/assets/images/dogs 6.png",
+        "/src/assets/images/dogs 7.png",
+        "/src/assets/images/dogs 8.png",
+        "/src/assets/images/dogs 9.png",
+        "/src/assets/images/dogs 10.png",
+        "/src/assets/images/dogs 11.png",
+        "/src/assets/images/dogs 12.png"
+      ]
+    }
+  ],
+  "Cat": [
+    {
+      "name": "Dog",
+      "images": [
+        "/src/assets/images/cats 1.png",
+        "/src/assets/images/cats 2.png",
+        "/src/assets/images/cats 3.png",
+        "/src/assets/images/cats 4.png",
+        "/src/assets/images/cats 5.png",
+        "/src/assets/images/cats 6.png",
+        "/src/assets/images/cats 7.png",
+        "/src/assets/images/cats 8.png",
+        "/src/assets/images/cats 9.png",
+        "/src/assets/images/cats 10.png",
+        "/src/assets/images/cats 2.png",
+        "/src/assets/images/cats 4.png"
+      ]
+    }
+  ],
+  "Rabbit": [
+    {
+      "name": "Dog",
+      "images": [
+        "/src/assets/images/rabbit 1.png",
+        "/src/assets/images/rabbit 2.png",
+        "/src/assets/images/rabbit 3.png",
+        "/src/assets/images/rabbit 4.png",
+        "/src/assets/images/rabbit 5.png",
+        "/src/assets/images/rabbit 6.png",
+        "/src/assets/images/rabbit 7.png",
+        "/src/assets/images/rabbit 8.png",
+        "/src/assets/images/rabbit 9.png",
+        "/src/assets/images/rabbit 10.png",
+        "/src/assets/images/rabbit 11.png",
+        "/src/assets/images/rabbit 1.png"
+      ]
+    }
+  ],
+  "Hamsters": [
+    {
+      "name": "Dog",
+      "images": [
+        "/src/assets/images/hamster 1.png",
+        "/src/assets/images/hamster 2.png",
+        "/src/assets/images/hamster 3.png",
+        "/src/assets/images/hamster 4.png",
+        "/src/assets/images/hamster 5.png",
+        "/src/assets/images/hamster 6.png",
+        "/src/assets/images/hamster 7.png",
+        "/src/assets/images/hamster 8.png",
+        "/src/assets/images/hamster 9.png",
+        "/src/assets/images/hamster 10.png",
+        "/src/assets/images/hamster 4.png",
+        "/src/assets/images/hamster 3.png"
+      ]
+    }
+  ],
+  "Birds": [
+    {
+      "name": "Dog",
+      "images": [
+        "/src/assets/images/birds 1.png",
+        "/src/assets/images/birds 2.png",
+        "/src/assets/images/birds 3.png",
+        "/src/assets/images/birds 4.png",
+        "/src/assets/images/birds 5.png",
+        "/src/assets/images/birds 6.png",
+        "/src/assets/images/birds 7.png",
+        "/src/assets/images/birds 8.png",
+        "/src/assets/images/birds 9.png",
+        "/src/assets/images/birds 10.png",
+        "/src/assets/images/birds 4.png",
+        "/src/assets/images/birds 3.png"
+      ]
+    }
+  ]
+}

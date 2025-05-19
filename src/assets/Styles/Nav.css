@@ -1,0 +1,76 @@
+/* NAVBAR CONTAINER */
+.navbar-custom {
+  background-color: #471C51;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+body {
+  padding-top: 80px; /* or height of your navbar */
+}
+
+/* LOGO */
+.logo-img {
+  max-width: 120px;
+}
+
+/* USER ICON */
+.user-icon {
+  height: 32px;
+}
+
+/* DESKTOP NAV LIST */
+.navbar-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+}
+
+.navbar-list li {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar-list li:hover {
+  text-decoration: underline;
+}
+
+/* TOGGLER ICON (black bars) */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+/* MOBILE NAV LIST (when open) */
+.mobile-list {
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 767.98px) {
+  .navbar-custom .logo-img {
+    width: 100px;
+  }
+
+  .navbar-list li {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,185 @@
+.dogs-parent {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.dogs-parent2 {
+  margin-top: 100px;
+}
+
+.dog-head {
+  position: relative;
+  text-align: center;
+}
+.dog-head img {
+  position: absolute;
+  top: -25px;
+  left: 489px;
+  width: 56px;
+  transform: rotate(-80deg);
+}
+.dog-head h2 {
+  font-weight: 800;
+}
+.dogs-parent2 {
+  margin-top: 100px;
+}
+
+.dog-head2 {
+  position: relative;
+  text-align: center;
+}
+.dog-head2 img {
+  position: absolute;
+  top: -25px;
+  left: 489px;
+  width: 56px;
+  transform: rotate(-80deg);
+}
+.dog-head2 h2 {
+  font-weight: 800;
+}
+.dogs-parent p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+@media (max-width: 575px) {
+  .dog-head img {
+    position: absolute;
+    top: -30px;
+    left: 84px;
+    width: 56px;
+    transform: rotate(-80deg);
+  }
+  .dog-head2 img {
+    position: absolute;
+    top: -30px;
+    left: 84px;
+    width: 56px;
+    transform: rotate(-80deg);
+  }
+  .dogs-parent p {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .dog-head img {
+    position: absolute;
+    top: -29px;
+    left: 280px;
+  }
+  .dog-head2 img {
+    position: absolute;
+    top: -29px;
+    left: 280px;
+  }
+
+  .dogs-parent p {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+.dogcart {
+  margin-top: 20px;
+}
+.dogcart h3 {
+  font-weight: 900;
+}
+.dogcart p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pet-content-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.pet-content-1 h3 {
+  font-weight: 900;
+}
+.adopebutton {
+  background-color: #471c51;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+
+.content-parent{
+    text-align: center;
+}
+.content-parent{
+    font-size: 30px;
+    font-weight: 700;
+
+}
+.content-parent-2 p{
+    margin-left: 200px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.content-parent-2 ul{
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 200px;  
+}
+
+
+@media(max-width:575px){
+    
+.content-parent{
+    text-align: center;
+}
+.content-parent p{
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.content-parent-2 p{
+    margin-left:0px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.content-parent-2 ul{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left:0px;  
+}
+}
+
+
+
+@media(min-width:576px) and (max-width:991px){
+    
+    .content-parent{
+        text-align: center;
+    }
+    .content-parent p{
+        font-size: 20px;
+        font-weight: 400;
+    
+    }
+    .content-parent-2 p{
+        margin-left:50px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .content-parent-2 ul{
+        font-size: 20px;
+        font-weight: 600;
+        margin-left:50px;  
+    }
+    }

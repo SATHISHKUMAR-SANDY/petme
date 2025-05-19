@@ -1,0 +1,30 @@
+.custom-container{
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.custom-accod-item{
+    border: solid 2px black !important;
+    border-radius: 18px !important;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+
+/* Custom override for accordion buttons */
+.accordion .accordion-button {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
+    padding-bottom: 60px;
+  }
+  
+  /* Keep it transparent even when expanded */
+  .accordion .accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
+  }

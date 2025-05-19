@@ -1,0 +1,21 @@
+.custom-input {
+  background-color: #471c51 !important;
+  border: 2px solid black !important;
+  color: white!important;
+ 
+  font-size: 30px !important;
+}
+.custom-input::placeholder{
+    color: white!important;
+}
+
+.custom-button{
+    text-align: center;
+    background-color: #EF4E3A;
+    padding: 10px 100px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
