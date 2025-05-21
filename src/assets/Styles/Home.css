@@ -49,7 +49,6 @@
   background-color: #471c51;
   color: white;
 }
-
 .logo-carousel-wrapper {
   overflow: hidden;
   background-color: #fff;
@@ -59,14 +58,14 @@
 
 .logo-carousel-track {
   display: flex;
-  width: calc(200%);
+  width: 200%;
   animation: scrollLeft 25s linear infinite;
 }
 
 .logo-carousel-item {
   flex: 0 0 auto;
-  width: 200px;
-  margin: 0 15px;
+  width: 100px;
+  margin: 0px;
 }
 
 .logo-carousel-item img {
@@ -75,7 +74,6 @@
   object-fit: contain;
 }
 
-/* Animation */
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);
@@ -84,6 +82,8 @@
     transform: translateX(-50%);
   }
 }
+
+
 
 /* ========== Mobile (up to 575px) ========== */
 @media (max-width: 575px) {
@@ -224,7 +224,9 @@
     position: relative;
   }
 }
-
+/* .borderall{
+  border: solid 2px black;
+} */
 .our-Adop-head {
   position: relative;
 }
@@ -360,6 +362,7 @@
 
   .our-featur-head img {
     position: absolute;
+
     top: -45px;
     right: -5px;
   }
@@ -584,7 +587,7 @@
   }
   .who-2 {
     position: relative;
-    left: 10px;
+
   }
 }
 
@@ -622,7 +625,7 @@
   margin-top: 20px;
 }
 .border-rotate-1 {
-  width: 95%;
+  width: 90%;
   height: 280px;
   border: solid 4px #471c51;
   border-radius: 20px;
@@ -660,7 +663,7 @@
   margin-top: 20px;
 }
 .border-rotate-2 {
-  width: 95%;
+  width: 90%;
   height: 280px;
   border: solid 4px #471c51;
   border-radius: 20px;
@@ -683,6 +686,7 @@
 }
 .border-wrapper2 img {
   transform: rotate(-20deg);
+  max-width: 83%;
 }
 
 .pet-card3 {
@@ -701,14 +705,14 @@
   margin-top: 20px;
 }
 .border-rotate-3 {
-  width: 95%;
+  width: 90%;
   height: 260px;
   border: solid 4px #471c51;
   border-radius: 20px;
   transform: rotate(17deg);
   position: absolute;
   top: 10px;
-  left: 22px;
+  left: 10px;
 }
 .badge3 {
   color: white;
@@ -825,7 +829,7 @@
     height: 330px;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 6px;
   }
 
   .img-content {
@@ -962,7 +966,7 @@ left: 0px; */
 
 @media (max-width: 575px) {
   .image-wrap2 img{
-    width: 200px;
+    width: 180px;
     height: 200px;
 
   }
@@ -970,7 +974,7 @@ left: 0px; */
     position: relative;
     display: block;
     top: 200px;
-    left: 15px;
+    left: 0px;
   }
 
   .border-rotate2 {

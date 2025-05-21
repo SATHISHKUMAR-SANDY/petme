@@ -36,6 +36,7 @@ if(validate()){
         password:"",
         email:""
     })
+    navi("/log")
 }
 }
 
@@ -45,15 +46,15 @@ if(validate()){
     <form  onSubmit={handelSubmit} className="row">
 <div className="col-8">
 <div className="row">
-<div class="col-12 custominput ">
-    <label for="inputAddress" className="form-label ">FullName</label>
+<div className="col-12 custominput ">
+     <label for="inputAddress" className="form-label ">FullName</label>
     <input type="text" className="form-control" id="inputAddress" name='name' onChange={handelFormdata} value={formdata.name}  />
   </div>
-  <div class="col-12 custominput mt-3">
+  <div className="col-12 custominput mt-3">
     <label for="inputAddress" className="form-label"   >Email Address</label>
     <input type="text" className="form-control" id="inputAddress" name='email'  onChange={handelFormdata}  value={formdata.email}/>
   </div>
-  <div class="col-12 custominput  mt-3">
+  <div className="col-12 custominput  mt-3">
     <label for="inputAddress" className="form-label"  >PassWord</label>
     <input type="text" className="form-control" id="inputAddress" name='password'  onChange={handelFormdata}  value={formdata.password}/>
   </div>

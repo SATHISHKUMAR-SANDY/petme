@@ -7,12 +7,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 const navi =useNavigate()
   return (
-    <nav className="navbar-custom">
+    <nav className="navbar-custom" style={{border:"solid 2px black"}}>
       <div className="container">
         <div className="row align-items-center justify-content-between">
           {/* Logo */}
           <div className="col-6 col-md-2">
-            <NavLink to="/"><img src={logo} alt="Logo" className="logo-img" /></NavLink>
+            <NavLink to="/Home"><img src={logo} alt="Logo" className="logo-img" /></NavLink>
           </div>
 
           {/* Hamburger Toggle - Mobile Only */}

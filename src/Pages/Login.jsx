@@ -47,6 +47,7 @@ function Login() {
         email: "",
         password: "",
       });
+      navi("/Home")
     }
   };
 
@@ -59,10 +60,10 @@ function Login() {
 
   return (
     <div className="container" style={{ marginTop: "200px" }}>
-      <form onSubmit={handleSubmit} className="row">
+      <form onSubmit={handleSubmit} className="row ">
         {err.valid && <p className="text-danger">{err.valid}</p>}
 
-        <div className="col-8">
+        <div className="col-md-8 col-11">
           <div className="row">
             <div className="col-12 custominput">
               <label htmlFor="inputName" className="form-label">Full Name</label>
@@ -96,7 +97,7 @@ function Login() {
           </div>
         </div>
 
-        <div className="col-3 custominput2 mt-5">
+        <div className="col-md-3   custominput2 ">
           <div className="card" style={{ width: "300px" }}>
             <div className="card-body">
               <h5 className="card-title">Register First?</h5>

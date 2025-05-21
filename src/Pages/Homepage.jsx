@@ -1,5 +1,5 @@
 import React from "react";
-import mainlogo from "../assets/images/logo.png"
+import mainlogo from "../assets/images/logo.png";
 
 import c1 from "../assets/images/c1.png";
 import c2 from "../assets/images/c2.png";
@@ -34,21 +34,20 @@ import f2 from "../assets/images/frame2.png";
 
 import f3 from "../assets/images/frame3.png";
 
-
-import foot1 from "../assets/images/footer1.png"
-import foot2 from "../assets/images/footer2.png"
-import foot3 from "../assets/images/footer3.png"
-import air from "../assets/images/arrow.png"
+import foot1 from "../assets/images/footer1.png";
+import foot2 from "../assets/images/footer2.png";
+import foot3 from "../assets/images/footer3.png";
+import air from "../assets/images/arrow.png";
 import "../assets/Styles/Home.css";
 import { useNavigate } from "react-router-dom";
 
 function Homepage() {
   const logos = [c1, c2, c3, c4, c5, c6];
   const repeatedLogos = [...logos, ...logos];
-const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <>
-      <div className="container-fluid home-main-contain">
+      <div className="container-fluid home-main-contain ">
         <div className="row home-main-banner">
           <div className="col-md-5 col-7 banner-content">
             <h1>
@@ -60,12 +59,22 @@ const navigate = useNavigate()
               Discover your perfect companion with<br></br> ease, browse, adopt,
               and bring home <br></br>the pets that fit your lifestyle.
             </p>
-            <button className="headder-banner-button" onClick={()=>navigate("/pets")}>Discover more</button>
+            <button
+              className="headder-banner-button"
+              onClick={() => navigate("/pets")}
+            >
+              Discover more
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="logo-carousel-wrapper">
+
+
+
+
+
+      <div className="logo-carousel-wrapper borderall">
         <div className="logo-carousel-track">
           {repeatedLogos.map((logo, index) => (
             <div className="logo-carousel-item" key={index}>
@@ -75,7 +84,10 @@ const navigate = useNavigate()
         </div>
       </div>
 
-      <div className="container text-center">
+
+
+      
+      <div className="container text-center  borderall ">
         <div className="who-head">
           <h1>Who We Are</h1>
           <img src={dog}></img>
@@ -117,7 +129,11 @@ const navigate = useNavigate()
         </div>
       </div>
 
-      <div className="container text-center mt-5 ">
+
+
+
+
+      <div className="container text-center mt-5  borderall ">
         <div className="our-Adop-head">
           <h1>Our Adaption Categories</h1>
           <img src={dog}></img>
@@ -130,44 +146,51 @@ const navigate = useNavigate()
           </p>
         </div>
 
-        <div className="Adop-categories" >
-          <div role="button" onClick={()=>navigate("/all/Dog")}>
+        <div className="Adop-categories">
+          <div role="button" onClick={() => navigate("/all/Dog")}>
             <img src={dogsi}></img>
             <p>Dog</p>
           </div>
 
-          <div role="button" onClick={()=>navigate("/all/Cat")}>
+          <div role="button" onClick={() => navigate("/all/Cat")}>
             <img src={catsi}></img>
             <p>Cats</p>
           </div>
 
-          <div role="button" onClick={()=>navigate("/all/Rabbit")}>
+          <div role="button" onClick={() => navigate("/all/Rabbit")}>
             <img src={rabi}></img>
             <p>Rabbit</p>
           </div>
 
-          <div role="button" onClick={()=>navigate("/all/Hamster")}>
+          <div role="button" onClick={() => navigate("/all/Hamster")}>
             <img src={hamsi} />
             <p>Hamster</p>
           </div>
 
-          <div role="button" onClick={()=>navigate("/all/Birds")}>
+          <div role="button" onClick={() => navigate("/all/Birds")}>
             <img src={birdi}></img>
             <p>Birds</p>
           </div>
         </div>
       </div>
 
-      <div className="container">
+
+
+
+      <div className="container  borderall">
         <div className="our-featur-head">
           <h1>Our Feautred Pets</h1>
           <img src={dog}></img>
         </div>
 
         <div className="featured-main-cantainer">
-          <div className=" featured-sub1-cantainer" role="button" onClick={()=> navigate("/Hamsters")}>
+          <div
+            className=" featured-sub1-cantainer"
+            role="button"
+            onClick={() => navigate("/Hamsters")}
+          >
             <div>
-              <img src={home1} />
+              <img src={home1} className="img-fluid" />
               <div className="sub1-content">
                 <p className="sub1-static">Hamster</p>
                 <div className="sub-1-hide">
@@ -179,9 +202,13 @@ const navigate = useNavigate()
             <h1>Twisky</h1>
           </div>
 
-          <div className=" featured-sub1-cantainer"  role="button" onClick={()=> navigate("/Cat")}>
+          <div
+            className=" featured-sub1-cantainer"
+            role="button"
+            onClick={() => navigate("/Cat")}
+          >
             <div>
-              <img src={home2} />
+              <img src={home2} className="img-fluid" />
               <div className="sub1-content">
                 <p className="sub1-static">Cat</p>
                 <div className="sub-1-hide">
@@ -193,9 +220,13 @@ const navigate = useNavigate()
             <h1>Lara</h1>
           </div>
 
-          <div className=" featured-sub1-cantainer"  role="button" onClick={()=> navigate("/Rabbit")}>
+          <div
+            className=" featured-sub1-cantainer"
+            role="button"
+            onClick={() => navigate("/Rabbit")}
+          >
             <div>
-              <img src={home3} />
+              <img src={home3} className="img-fluid" />
               <div className="sub1-content">
                 <p className="sub1-static">Rabbit</p>
                 <div className="sub-1-hide">
@@ -208,10 +239,15 @@ const navigate = useNavigate()
           </div>
         </div>
 
-        <button className="findpets-button" onClick={()=>navigate("/Pets")}>Find More Pets</button>
+        <button className="findpets-button" onClick={() => navigate("/Pets")}>
+          Find More Pets
+        </button>
       </div>
 
-      <div className="container-fluid home-main-contain-2">
+
+
+
+       <div className="container-fluid home-main-contain-2 borderall">
         <div className="row home-main-banner-2">
           <div className="col-md-5 col-7 banner-content-2">
             <h1>
@@ -223,12 +259,20 @@ const navigate = useNavigate()
               Discover your perfect companion with<br></br> ease, browse, adopt,
               and bring home <br></br>the pets that fit your lifestyle.
             </p>
-            <button className="headder-banner-button-2"onClick={()=>navigate("/Pets")}>Discover more</button>
+            <button
+              className="headder-banner-button-2"
+              onClick={() => navigate("/Pets")}
+            >
+              Discover more
+            </button>
           </div>
         </div>
-      </div>
+      </div> 
 
-      <div className="container who-2 text-center m-md-5 my-5">
+
+
+
+      <div className="container who-2 text-center m-md-5 my-5 borderall">
         <div className="who-head-2">
           <h1>How Adaption Works</h1>
           <img src={dog}></img>
@@ -239,10 +283,13 @@ const navigate = useNavigate()
             with your new companion you wil only need to follow the<br></br>{" "}
             below THREE STEPS
           </p>
-        </div>
+        </div>{" "}
       </div>
 
-      <div className="container">
+
+
+
+      <div className="container borderall">
         <div className="row  flex-wrap justify-content-md-between">
           <div className="col-lg-3 col-md-5 col-11">
             <div className="pet-card1  mt-lg-0 mt-5">
@@ -253,7 +300,7 @@ const navigate = useNavigate()
                   className="img-fluid"
                   style={{ width: "280px", height: "280px" }}
                 />
-                <div className="border-rotate-1"></div>
+                <div className=" border-rotate-1"></div>
                 <span className="badge1">1</span>
               </div>
               <h5>KNOW YOUR PET</h5>
@@ -273,7 +320,7 @@ const navigate = useNavigate()
                   className="img-fluid"
                   style={{ width: "330px", height: "320px" }}
                 />
-                <div className="border-rotate-2"></div>
+                <div className=" border-rotate-2"></div>
                 <span className="badge2">2</span>
               </div>
               <h5>KNOW YOUR PET</h5>
@@ -293,7 +340,7 @@ const navigate = useNavigate()
                   className="img-fluid"
                   style={{ width: "280px", height: "280px" }}
                 />
-                <div className="border-rotate-3"></div>
+                <div className=" border-rotate-3"></div>
                 <span className="badge3">3</span>
               </div>
               <h5>KNOW YOUR PET</h5>
@@ -306,7 +353,10 @@ const navigate = useNavigate()
         </div>
       </div>
 
-      <div className="container">
+
+
+
+      <div className="container borderall">
         <div className="check-content-1">
           <h1>Check Our Expert Advice</h1>
           <img src={dog} className="img-fluid"></img>
@@ -317,7 +367,11 @@ const navigate = useNavigate()
 
         <div className="container-fluid">
           <div className="row   flex-wrap  justify-content-md-between ms-md-4">
-            <div className="col-md-5 col-lg-4 col-12" role="button" onClick={()=>navigate("/petc2")}>
+            <div
+              className="col-md-5 col-lg-4 col-12"
+              role="button"
+              onClick={() => navigate("/petc2")}
+            >
               <img
                 src={blog1}
                 style={{ width: "290px", height: "300px" }}
@@ -330,7 +384,11 @@ const navigate = useNavigate()
                 befor<br></br>you bring them home
               </p>
             </div>
-            <div className="col-md-5 col-lg-4 col-12"  role="button" onClick={()=>navigate("/petc2")}>
+            <div
+              className="col-md-5 col-lg-4 col-12"
+              role="button"
+              onClick={() => navigate("/petc2")}
+            >
               <img
                 src={blog2}
                 style={{ width: "290px", height: "300px" }}
@@ -343,7 +401,11 @@ const navigate = useNavigate()
                 befor<br></br>you bring them home
               </p>
             </div>
-            <div className="col-md-5 col-lg-4 col-12"  role="button" onClick={()=>navigate("/petc2")}>
+            <div
+              className="col-md-5 col-lg-4 col-12"
+              role="button"
+              onClick={() => navigate("/petc2")}
+            >
               <img
                 src={blog3}
                 style={{ width: "290px", height: "300px" }}
@@ -358,9 +420,14 @@ const navigate = useNavigate()
             </div>
           </div>
         </div>
-      </div>
+      </div>  
 
-      <div className="container">
+
+
+
+
+
+      <div className="container borderall">
         <div className="Testimonies">
           <h2>Our Customes Testimonies</h2>
           <img src={dog}></img>
@@ -385,9 +452,11 @@ const navigate = useNavigate()
             </div>
           </div>
         </div>
-      </div>
+      </div> 
 
-      <div className="container-fluid mt-5">
+
+
+       <div className="container-fluid mt-5 borderall">
         <div className="image-wrap2">
           <img
             src={test2}
@@ -406,30 +475,31 @@ const navigate = useNavigate()
             <p>I was wrong,we become on the very first day... </p>
           </div>
         </div>
-      </div>
-
-      <div className="container parent-upfooter">
-      <div className="blog"  role="button" onClick={()=>navigate("/petc2")}>
-            <img src={foot1} ></img>
-            <h2>Blog For You</h2>
-            <img src={air}className="air" ></img>
-          </div>
-          <div className="service" role="button" onClick={()=>navigate("/pets")} >
-            <img src={foot2}  ></img>
-            <h2>Book Our Service</h2>
-            <img src={air} className="air2"></img>
-          </div>
-          <div className="speak">
-            <img src={foot3} ></img>
-            <h2>Speak To  Expert</h2>
-            <img src={air} className="air3" ></img>
-          </div>
-      </div>
+      </div> 
 
 
 
-
-
+       <div className="container parent-upfooter borderall">
+        <div className="blog" role="button" onClick={() => navigate("/petc2")}>
+          <img src={foot1}></img>
+          <h2>Blog For You</h2>
+          <img src={air} className="air"></img>
+        </div>
+        <div
+          className="service"
+          role="button"
+          onClick={() => navigate("/pets")}
+        >
+          <img src={foot2}></img>
+          <h2>Book Our Service</h2>
+          <img src={air} className="air2"></img>
+        </div>
+        <div className="speak">
+          <img src={foot3}></img>
+          <h2>Speak To Expert</h2>
+          <img src={air} className="air3"></img>
+        </div>
+      </div>  
     </>
   );
 }

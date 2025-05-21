@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/Styles/Petass.css";
 import dog from "../assets/images/paw.png";
-import { useNavigate } from "react-router-dom";
 
-export default function Petassesment() {
-  const [ratio, setRatio] = useState({
+export default function PetAssessment() {
+  const [formData, setFormData] = useState({
     name: "",
     number: "",
     address: "",
@@ -17,183 +17,125 @@ export default function Petassesment() {
     answer5: "",
   });
 
-
-const navi = useNavigate()
-  const [err, seterr] = useState({});
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setRatio((prev) => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
   const validate = () => {
-    const newerr = {};
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.occupation.trim()) newErrors.occupation = "Occupation is required";
 
-    if (!ratio.name.trim()) newerr.name = "Name field is required";
-    if (!ratio.occupation.trim()) newerr.occupation = "Occupation field is required";
-
-    if (!ratio.number.trim()) {
-      newerr.number = "Phone number is required";
-    } else if (isNaN(ratio.number) || ratio.number.length !== 10) {
-      newerr.number = "Enter a valid 10-digit number";
+    if (!formData.number.trim()) {
+      newErrors.number = "Phone number is required";
+    } else if (isNaN(formData.number) || formData.number.length !== 10) {
+      newErrors.number = "Enter a valid 10-digit number";
     }
 
-    if (!ratio.email) {
-      newerr.email = "Email field is required";
-    } else if (!/^\S+@\S+\.\S+$/.test(ratio.email)) {
-      newerr.email = "Enter valid Email";
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      newErrors.email = "Invalid Email";
     }
 
-    if (!ratio.answer1) newerr.answer1 = "This question is required";
-    if (!ratio.answer2) newerr.answer2 = "This question is required";
-    if (!ratio.answer3) newerr.answer3 = "This question is required";
-    if (!ratio.answer4) newerr.answer4 = "This question is required";
-    if (!ratio.answer5) newerr.answer5 = "This question is required";
+    for (let i = 1; i <= 5; i++) {
+      if (!formData[`answer${i}`]) {
+        newErrors[`answer${i}`] = "This question is required";
+      }
+    }
 
-    seterr(newerr);
-    return Object.keys(newerr).length === 0;
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log("Form submitted:", ratio);
+      localStorage.setItem("userForm", JSON.stringify(formData));
       alert("Form submitted successfully!");
-      localStorage.setItem("userForm", JSON.stringify(ratio));
-      navi("/makeoppinment")
+      navigate("/makeoppinment");
     } else {
-      alert("All fields are required");
+      alert("Please complete all required fields");
     }
   };
 
   useEffect(() => {
-    const savdata = localStorage.getItem("userForm");
-    if (savdata) {
-      setRatio(JSON.parse(savdata));
+    const saved = localStorage.getItem("userForm");
+    if (saved) {
+      setFormData(JSON.parse(saved));
     }
-
-
   }, []);
 
   return (
-    <div>
-      <div className="container dogs-parent3">
-        <div className="dog-head3">
-          <h2>Pet Assessment</h2>
-          <img src={dog} alt="Dog Paw" />
-        </div>
+    <div className="pet-container">
+      <div className="dog-head">
+        <h2>Pet Assessment</h2>
+        <img src={dog} alt="Dog Paw" />
       </div>
 
-      <div className="container text-center">
-        <p className="fs-3">
-          <strong>
-            Thank you for expressing your interest in adopting a pet
-          </strong>
-        </p>
-        <p className="fs-3">
-          Please answer the assessment questions to assist us in scheduling your
-          appointment with the NGO/shelter coordinator and to assess your
-          readiness for adopting a pet.
+      <div className="intro-text">
+        <p><strong>Thank you for expressing your interest in adopting a pet.</strong></p>
+        <p>
+          Please answer the assessment questions to assist us in scheduling your appointment with the NGO/shelter coordinator and to assess your readiness for adopting a pet.
         </p>
       </div>
 
-      <div className="container m-5">
-        <h1>Part A</h1>
-        <form onSubmit={handleSubmit}>
-          {/* Basic Info */}
-          {[
-            { label: "Name", name: "name", type: "text" },
-            { label: "Address", name: "address", type: "text" },
-            { label: "Telephone Number", name: "number", type: "text" },
-            { label: "Email Address", name: "email", type: "email" },
-            { label: "Current Occupation", name: "occupation", type: "text" },
-          ].map((field, idx) => (
-            <div className="first-group mb-3" key={idx}>
-              <label>
-                {field.label} <span className="text-danger">*</span>
-              </label>
-              <input
-                type={field.type}
-                name={field.name}
-                placeholder={`Enter your ${field.label}`}
-                value={ratio[field.name]}
-                onChange={handleChange}
-              />
-              {err[field.name] && (
-                <div className="text-danger">{err[field.name]}</div>
-              )}
-            </div>
-          ))}
-
-          {/* Radio Questions */}
-          <div className="container m-5">
-            <h1>Part B</h1>
-
-            {[
-              {
-                label: "Are you living with family?",
-                name: "answer1",
-              },
-              {
-                label:
-                  "If you live in a rented house, does your landlord allow pets?",
-                name: "answer2",
-              },
-              {
-                label: "Do you have any prior pet experience?",
-                name: "answer3",
-              },
-              {
-                label:
-                  "Will you be able to take your pet for a walk twice/thrice a day?",
-                name: "answer4",
-              },
-              {
-                label:
-                  "Is there anyone to take care of the pet when you are out?",
-                name: "answer5",
-              },
-            ].map((q, idx) => (
-              <div className="row first-group2 mb-3" key={idx}>
-                <div className="col-5">
-                  <label>
-                    {q.label}
-                    <span className="text-danger">*</span>
-                  </label>
-                </div>
-                <div className="col-5">
-                  <input
-                    type="radio"
-                    name={q.name}
-                    value="yes"
-                    checked={ratio[q.name] === "yes"}
-                    onChange={handleChange}
-                  />
-                  <label htmlFor={`${q.name}-yes`} className="me-2">Yes</label>
-                  <input
-                    type="radio"
-                    name={q.name}
-                    value="no"
-                    checked={ratio[q.name] === "no"}
-                    onChange={handleChange}
-                  />
-                  <label htmlFor={`${q.name}-no`}>No</label>
-                  {err[q.name] && (
-                    <div className="text-danger">{err[q.name]}</div>
-                  )}
-                </div>
-              </div>
-            ))}
+      <form className="form-wrapper" onSubmit={handleSubmit}>
+        <h3>Part A - Basic Info</h3>
+        {[
+          { label: "Name", name: "name", type: "text" },
+          { label: "Address", name: "address", type: "text" },
+          { label: "Telephone Number", name: "number", type: "text" },
+          { label: "Email Address", name: "email", type: "email" },
+          { label: "Current Occupation", name: "occupation", type: "text" },
+        ].map((field, idx) => (
+          <div className="form-group" key={idx}>
+            <label>
+              {field.label} <span className="required">*</span>
+            </label>
+            <input
+              type={field.type}
+              name={field.name}
+              value={formData[field.name]}
+              onChange={handleChange}
+              placeholder={`Enter your ${field.label}`}
+            />
+            {errors[field.name] && <div className="error">{errors[field.name]}</div>}
           </div>
+        ))}
 
-          <button type="submit"  className=" navi-button" >
-            Submit
-          </button>
-        </form>
-      </div>
+        <h3>Part B - Pet Readiness</h3>
+        {[
+          "Are you living with family?",
+          "If you live in a rented house, does your landlord allow pets?",
+          "Do you have any prior pet experience?",
+          "Will you be able to take your pet for a walk twice/thrice a day?",
+          "Is there anyone to take care of the pet when you are out?",
+        ].map((question, idx) => {
+          const name = `answer${idx + 1}`;
+          return (
+            <div className="form-group" key={idx}>
+              <label>{question} <span className="required">*</span></label>
+              <div className="radio-group">
+                <label><input type="radio" name={name} value="yes" checked={formData[name] === "yes"} onChange={handleChange} /> Yes</label>
+                <label><input type="radio" name={name} value="no" checked={formData[name] === "no"} onChange={handleChange} /> No</label>
+              </div>
+              {errors[name] && <div className="error">{errors[name]}</div>}
+            </div>
+          );
+        })}
+
+        <div className="submit-wrap">
+          <button type="submit" className="submit-btn">Submit</button>
+        </div>
+      </form>
     </div>
   );
 }

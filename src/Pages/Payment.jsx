@@ -1,11 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import dog from "../assets/images/paw.png";
 import p1 from "../assets/images/payment1.png";
 import p2 from "../assets/images/payment2.png";
-import Swal from 'sweetalert2';
-
-
+import Swal from "sweetalert2";
 
 function Payment() {
   const [cardNumber, setCardNumber] = useState("");
@@ -13,50 +10,40 @@ function Payment() {
   const [expiry, setExpiry] = useState("");
   const [name, setName] = useState("");
 
-  const success = ()=> {
+  const success = () => {
     Swal.fire({
-        title: "Paymeny Success",
-        text: "Yeh!",
-        icon: "success"
-      });
+      title: "Payment Success",
+      text: "Yeh!",
+      icon: "success",
+    });
   };
+
   return (
     <>
-      <div className="container dogs-parent3">
-        <div className="dog-head3">
-          <h2>Book Payment</h2>
-        </div>
-      </div>
-      <div className="container py-5">
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
+
+      <div className="container py-4 mt-lg-5">
+        <div className="row gy-4">
+          {/* Left Side: Payment Form */}
+          <div className="col-12 col-lg-8">
             <div className="card shadow-sm">
               <div
-                className="card-header d-flex justify-content-between"
+                className="card-header d-flex justify-content-between align-items-center flex-wrap"
                 style={{ backgroundColor: "#FFF8F7" }}
               >
                 <div>
-                  <h2 className="h4 mb-0">Credit Card</h2>
+                  <h2 className="h5 mb-1">Credit Card</h2>
                   <p className="text-muted small mb-0">
                     Save money transfer using bank account Visa, Mastercard
                   </p>
                 </div>
-                <div>
-                  <img
-                    src={p1}
-                    style={{ width: "46px", height: "46px" }}
-                    alt="Dog Paw"
-                  />
-                  <img
-                    src={p2}
-                    style={{ width: "50px", height: "50px" }}
-                    alt="Dog Paw"
-                  />
+                <div className="d-flex gap-2 mt-2 mt-lg-0">
+                  <img src={p1} alt="p1" style={{ width: "46px", height: "46px" }} />
+                  <img src={p2} alt="p2" style={{ width: "50px", height: "50px" }} />
                 </div>
               </div>
 
               <div className="card-body" style={{ backgroundColor: "#FFF8F7" }}>
-                <div className="mb-4">
+                <div className="mb-3">
                   <label htmlFor="cardNumber" className="form-label fw-bold">
                     CREDIT CARD NUMBER
                   </label>
@@ -71,8 +58,8 @@ function Payment() {
                   />
                 </div>
 
-                <div className="row mb-4">
-                  <div className="col-md-6 mb-3 mb-md-0">
+                <div className="row">
+                  <div className="col-md-6 mb-3">
                     <label htmlFor="cvv" className="form-label fw-bold">
                       CVV CODE
                     </label>
@@ -86,7 +73,7 @@ function Payment() {
                       required
                     />
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-6 mb-3">
                     <label htmlFor="expiry" className="form-label fw-bold">
                       EXPIRY DATE
                     </label>
@@ -102,7 +89,7 @@ function Payment() {
                   </div>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-3">
                   <label htmlFor="name" className="form-label fw-bold">
                     NAME ON CARD
                   </label>
@@ -116,13 +103,13 @@ function Payment() {
                     required
                   />
                 </div>
-
-                <hr className="my-4" />
               </div>
             </div>
           </div>
-          <div className="col-3 border">
-            <div className="mb-4">
+
+          {/* Right Side: Payment Summary */}
+          <div className="col-12 col-lg-4">
+            <div className="card p-4 shadow-sm">
               <h5 className="mb-3">Booking Charge</h5>
               <div className="d-flex justify-content-between mb-2">
                 <span>1 500 GST</span>
@@ -136,21 +123,22 @@ function Payment() {
                 <span>220 TOTAL</span>
                 <span className="fw-bold">₹220.00</span>
               </div>
-              <div className="d-flex justify-content-between mb-2">
+              <div className="d-flex justify-content-between mb-4">
                 <span>1 400</span>
                 <span className="fw-bold">₹1,400.00</span>
               </div>
-            </div>
 
-            <button
-              type="submit"
-              className="btn btn-primary w-100 py-3 fw-bold " onClick={success} style={{backgroundColor:"black"}}
-             >
-              PROCEED TO PAY
-            </button>
+              <button
+                type="button"
+                className="btn btn-dark w-100 py-3 fw-bold"
+                onClick={success}
+              >
+                PROCEED TO PAY
+              </button>
 
-            <div className="text-center mt-3">
-              <small className="text-muted">100% Secure Payments</small>
+              <div className="text-center mt-3">
+                <small className="text-muted">100% Secure Payments</small>
+              </div>
             </div>
           </div>
         </div>

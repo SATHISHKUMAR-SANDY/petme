@@ -2,8 +2,10 @@ import React from "react";
 import dog from "../assets/images/paw.png";
 import dog4 from "../assets/images/birds 8.png";
 import "../assets/Styles/Dogs.css";
+import { useNavigate } from "react-router-dom";
 
 function BirdsAdop() {
+  const navi = useNavigate()
   return (
     <>
       <div className="container dogs-parent2">
@@ -24,7 +26,7 @@ function BirdsAdop() {
 
       <div className="pet-content-1 ">
         <h3 className="m-0">Pepper</h3>
-        <button className="adopebutton">Adopt Me</button>
+        <button onClick={()=>navi("/petass")} className="adopebutton">Adopt Me</button>
       </div>
 
 
